@@ -1,0 +1,72 @@
+/* This is the style sheet for AboutChiari.htm for my final project in CGS 1820.
+
+		Name: Scot StClair
+		Date: 11/22/15
+		
+*/
+
+html {
+	background-image: url(wall.jpg)
+}
+
+header {
+	font-size: 60px;
+	text-align:center;
+	color: DarkRed;
+}
+
+body {
+	color: DarkRed;
+	font-size: 28px;
+}
+
+body a {
+	color: DarkRed;
+}
+
+div#definition p, div#causes p {
+	text-indent: 50px;
+}
+
+div#treatment p {
+	text-indent: 0px;
+}
+
+img#chiari {
+	float: right;
+	width: 450px;
+	height: auto;
+}
+
+nav.horizontal {
+	text-align: center;
+}
+
+nav.horizontal a {
+	background-color: DarkRed;
+	color: Tan;
+	border-radius: 10px;
+	text-decoration: none;
+	text-align: center;
+	padding: 5px;
+}
+
+nav.horizontal a:hover {
+	background-color: White;
+	color: DarkRed;
+}
+
+header img {
+	float: left;
+	width: auto;
+	height: 150px;
+}
+
+section {
+	clear: left;
+	float: left;
+}
+
+footer {
+	text-align: center;
+}

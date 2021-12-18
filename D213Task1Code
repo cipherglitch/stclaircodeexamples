@@ -1,0 +1,40 @@
+#loading the libraries
+library(readr)
+library(astsa)
+
+#importing the data and creating variables
+dataset <- read.csv("medical_time_series")
+RevData <- dataset$Revenue
+RevDiff <- diff(RevData)
+
+#creating a data frame to slice the train and test data sets
+df_RevData <- data.frame(RevData)
+
+#plotting initial data
+ts.plot(RevData)
+ts.plot(diff(RevData))
+
+#creating the train and test sets
+train_data <- df_RevData[1:611,]
+test_data <- df_RevData[612:731,]
+
+#creating ACF/PACF for model determination
+acf2(RevData)
+
+#beginning the model fit
+sarima(train_data,1,1,0)
+sarima(train_data,2,1,0)
+sarima(train_data,3,1,0)
+sarima(train_data,4,1,0)
+sarima(train_data,5,1,0)
+sarima(train_data,6,1,0)
+sarima(train_data,7,1,0)
+
+#predicting values
+sarima.for(train_data, 6,1,0, n.ahead = 120)
+
+#adding observed values to predicted value plot
+lines(RevData, lty=2, lwd=2, col="red")
+
+#creating spectral density plot
+mvspec(RevDiff, spans = c(9,9), log="no")

@@ -1,4 +1,4 @@
-#Content of the get-weather-data.py
+#Content of the CarComp-Assessment.py
 # This script below gets the data for every day of a given year.
 #Company cars: 2019 Escape, 2019 CRV, 2019 Santa Fe, 2019 RAV4
 #Company Eval Points:
